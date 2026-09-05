@@ -33,6 +33,255 @@ This repository aims to build practical knowledge of:
 
 ---
 
+## ## 📂 Repository Structure
+
+The repository is organized as a progressive learning path, starting with the CARLA fundamentals and gradually moving toward perception, ADAS, sensor fusion, autonomous driving, ROS 2, and simulation-based testing.
+
+```text
+LearnCARLA/
+│
+├── README.md
+├── requirements.txt
+├── .gitignore
+│
+├── 01_basics/
+│   ├── 01_connect_to_carla.py
+│   ├── 02_get_world.py
+│   ├── 03_get_maps.py
+│   ├── 04_load_map.py
+│   └── README.md
+│
+├── 02_worlds/
+│   ├── 01_load_town.py
+│   ├── 02_weather.py
+│   ├── 03_time_of_day.py
+│   └── README.md
+│
+├── 03_actors/
+│   ├── vehicles/
+│   │   ├── list_vehicles.py
+│   │   ├── spawn_vehicle.py
+│   │   ├── spawn_multiple_vehicles.py
+│   │   └── destroy_vehicles.py
+│   │
+│   ├── pedestrians/
+│   │   ├── spawn_pedestrian.py
+│   │   └── spawn_pedestrians.py
+│   │
+│   └── README.md
+│
+├── 04_traffic/
+│   ├── 01_autopilot.py
+│   ├── 02_traffic_manager.py
+│   ├── 03_generate_traffic.py
+│   └── README.md
+│
+├── 05_sensors/
+│   ├── rgb_camera/
+│   │   ├── rgb_camera.py
+│   │   └── live_view.py
+│   │
+│   ├── semantic_segmentation/
+│   │   ├── semantic_camera.py
+│   │   └── live_view.py
+│   │
+│   ├── instance_segmentation/
+│   │   └── instance_camera.py
+│   │
+│   ├── depth/
+│   │   └── depth_camera.py
+│   │
+│   ├── lidar/
+│   │   └── lidar.py
+│   │
+│   ├── radar/
+│   │   └── radar.py
+│   │
+│   ├── gnss/
+│   │   └── gnss.py
+│   │
+│   └── imu/
+│       └── imu.py
+│
+├── 06_computer_vision/
+│   ├── 01_opencv/
+│   ├── 02_image_processing/
+│   ├── 03_object_detection/
+│   ├── 04_lane_detection/
+│   └── 05_traffic_light_detection/
+│
+├── 07_yolo/
+│   ├── 01_yolo_basics/
+│   ├── 02_vehicle_detection/
+│   ├── 03_pedestrian_detection/
+│   └── 04_carla_yolo/
+│
+├── 08_vehicle_control/
+│   ├── 01_manual_control.py
+│   ├── 02_vehicle_control.py
+│   ├── 03_steering.py
+│   ├── 04_throttle_brake.py
+│   └── pid/
+│       ├── pid_controller.py
+│       └── vehicle_pid.py
+│
+├── 09_adas/
+│   ├── aeb/
+│   │   ├── README.md
+│   │   ├── aeb.py
+│   │   └── scenario.py
+│   │
+│   ├── acc/
+│   │   ├── README.md
+│   │   ├── acc.py
+│   │   └── scenario.py
+│   │
+│   ├── lane_assist/
+│   │   ├── README.md
+│   │   └── lane_assist.py
+│   │
+│   ├── traffic_light_assist/
+│   │   └── traffic_light_assist.py
+│   │
+│   └── pedestrian_detection/
+│       └── pedestrian_detection.py
+│
+├── 10_sensor_fusion/
+│   ├── camera_lidar/
+│   ├── camera_radar/
+│   ├── lidar_radar/
+│   └── multi_sensor_fusion/
+│
+├── 11_localization/
+│   ├── gnss/
+│   ├── imu/
+│   ├── odometry/
+│   └── localization.py
+│
+├── 12_planning/
+│   ├── waypoint_planning/
+│   ├── path_planning/
+│   └── behavior_planning/
+│
+├── 13_autonomous_driving/
+│   ├── perception/
+│   ├── localization/
+│   ├── planning/
+│   ├── control/
+│   └── autonomous_vehicle.py
+│
+├── 14_ros2/
+│   ├── carla_ros_bridge/
+│   ├── sensors/
+│   ├── perception/
+│   ├── vehicle_control/
+│   └── autonomous_driving/
+│
+├── 15_scenarios/
+│   ├── pedestrian_crossing/
+│   ├── emergency_braking/
+│   ├── cut_in/
+│   ├── lane_change/
+│   └── traffic_light/
+│
+├── 16_testing/
+│   ├── scenario_testing/
+│   ├── sensor_testing/
+│   ├── perception_testing/
+│   └── adas_testing/
+│
+├── common/
+│   ├── carla_connection.py
+│   ├── vehicle_utils.py
+│   ├── sensor_utils.py
+│   └── visualization.py
+│
+└── docs/
+    ├── carla_architecture.md
+    ├── coordinate_systems.md
+    ├── sensors.md
+    └── useful_commands.md
+```
+
+### 🧭 Learning Progression
+
+The folder structure follows the development of an autonomous vehicle:
+
+```text
+CARLA Basics
+     │
+     ▼
+Worlds & Actors
+     │
+     ▼
+Traffic
+     │
+     ▼
+Sensors
+     │
+     ▼
+Computer Vision
+     │
+     ▼
+Object Detection
+     │
+     ▼
+Vehicle Control
+     │
+     ▼
+ADAS
+     │
+     ▼
+Sensor Fusion
+     │
+     ▼
+Localization
+     │
+     ▼
+Planning
+     │
+     ▼
+Autonomous Driving
+     │
+     ▼
+ROS 2 Integration
+     │
+     ▼
+Scenario Testing
+```
+
+### 📁 Directory Overview
+
+| Directory                | Purpose                                             |
+| ------------------------ | --------------------------------------------------- |
+| `01_basics/`             | CARLA fundamentals and Python API                   |
+| `02_worlds/`             | Maps, weather, and simulation modes                 |
+| `03_actors/`             | Vehicles, pedestrians, blueprints, and actors       |
+| `04_traffic/`            | Traffic Manager, autopilot, and traffic generation  |
+| `05_sensors/`            | CARLA sensors and sensor data                       |
+| `06_computer_vision/`    | OpenCV and image-processing fundamentals            |
+| `07_yolo/`               | YOLO-based object detection                         |
+| `08_vehicle_control/`    | Vehicle control and PID controllers                 |
+| `09_adas/`               | AEB, ACC, lane assistance, and other ADAS functions |
+| `10_sensor_fusion/`      | Multi-sensor perception and object association      |
+| `11_localization/`       | GNSS, IMU, odometry, and localization               |
+| `12_planning/`           | Waypoint, path, and behavior planning               |
+| `13_autonomous_driving/` | Complete autonomous-driving pipeline                |
+| `14_ros2/`               | CARLA and ROS 2 integration                         |
+| `15_scenarios/`          | Reusable autonomous-driving scenarios               |
+| `16_testing/`            | Scenario, sensor, perception, and ADAS testing      |
+| `common/`                | Reusable Python utilities shared across modules     |
+| `docs/`                  | Technical documentation and reference material      |
+
+```
+
+This structure also separates **learning modules** (`01`–`16`) from reusable infrastructure (`common/`) and documentation (`docs/`), which should make the repository easier to grow as the projects become more advanced.
+
+I would **not change the rest of your README**. Your existing roadmap already matches this structure; the detailed structure simply makes the GitHub repository organization much clearer.
+```
+
+---
+
 ## 🧠 Learning Roadmap
 
 ### 01 — CARLA Basics

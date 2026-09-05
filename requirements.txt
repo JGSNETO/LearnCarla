@@ -1,0 +1,29 @@
+```text
+# LearnCARLA
+# CARLA Simulator Python dependencies
+
+# CARLA Python API
+carla==0.9.16
+
+# Numerical computing
+numpy
+
+# Computer vision
+opencv-python
+
+# Visualization
+matplotlib
+
+# Scientific computing
+scipy
+
+# Machine learning / object detection
+ultralytics
+
+# Image processing
+Pillow
+
+# Jupyter notebooks
+jupyter
+ipykernel
+```
