@@ -1,4 +1,3 @@
-```text
 # LearnCARLA
 # CARLA Simulator Python dependencies
 
@@ -26,4 +25,3 @@ Pillow
 # Jupyter notebooks
 jupyter
 ipykernel
-```
