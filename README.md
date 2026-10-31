@@ -83,10 +83,6 @@ LearnCARLA/
 │   │
 │   ├── semantic_segmentation/
 │   │   ├── semantic_camera.py
-│   │   └── live_view.py
-│   │
-│   ├── instance_segmentation/
-│   │   └── instance_camera.py
 │   │
 │   ├── depth/
 │   │   └── depth_camera.py
